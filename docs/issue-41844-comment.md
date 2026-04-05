@@ -1,6 +1,6 @@
 # Comment for anthropics/claude-code#41844
 
-**Ready to paste as a GitHub issue comment.**
+**This is a copy of the comment posted on the issue. Keep in sync.**
 
 ---
 
@@ -8,7 +8,7 @@
 
 There are 30+ open issues requesting companion customization — name, appearance, personality, language, behavior, actionable feedback. This is clearly a high-demand feature area.
 
-I put together an RFC and proof-of-concept plugin that proposes making the companion extensible through the existing plugin system:
+I put together a proposal and proof-of-concept plugin for making the companion extensible through the existing plugin system:
 
 **[claude-code-companion-rfc](https://github.com/thaafox/claude-code-companion-rfc)**
 
@@ -19,7 +19,7 @@ Add `companion` as a plugin component (like skills, agents, hooks, MCP, LSP, out
 ```yaml
 ---
 name: my-buddy
-displayName: MyBuddy
+displayName: My Buddy
 render:
   art: ./art.txt
   bubble: true
@@ -27,8 +27,8 @@ subscriptions:
   - event: PostToolUse
     matcher: "Write|Edit|Bash"
 triggers:
-  - id: unused-imports
-    priority: medium
+  - id: missing-tests
+    priority: high
     delivery: ambient
 budget:
   maxCommentsPerTurn: 1
@@ -37,16 +37,22 @@ safety:
   toolAccess: none
   canBlock: false
 ---
-You are MyBuddy. Your personality prompt goes here. Define voice, focus, behavior.
+Your personality goes here. How does it speak?
+What does it care about? When should it shut up?
 ```
+
+### How it would work for users
+
+- **Install someone else's companion:** `claude plugin install cool-companion@marketplace`
+- **Build your own:** create a `COMPANION.md` with name, art, personality, triggers
+- **Just change the basics:** even a simple `companion.name` and `companion.personality` in settings.json would cover most of what people are asking for
 
 ### What the repo includes
 
-- **Proposed `COMPANION.md` spec** — event subscriptions, delivery modes (ambient/escalate/silent), budget controls, visibility contracts, security rules
-- **Example companion + blank template** for creating your own
-- **Working proof-of-concept plugin** using hooks to demonstrate the behavior
-- **Technical architecture research** on how `/buddy` currently works
-- **Competitive landscape analysis** — no major AI coding tool offers this
+- **Proposed `COMPANION.md` spec** with event subscriptions, delivery modes (ambient/escalate/silent), budget controls, visibility contracts, security rules
+- **Working proof-of-concept plugin** with hooks that detect real patterns (hardcoded secrets, iteration loops, missing tests, scope creep)
+- **Technical architecture research** on how `/buddy` actually works under the hood
+- **Competitive landscape** — checked 7 major AI coding tools, none offer a customizable agent-aware companion
 - **Evidence of demand** — 30+ categorized issues
 
 ### Related issues this would address
@@ -55,9 +61,4 @@ Name: #42405, #41990 · Appearance: #41766, #43306, #42753, #43028 · Personalit
 
 ### Why plugin-based
 
-The companion is the only user-facing feature in Claude Code with zero extensibility. Skills, agents, hooks, MCP, LSP, output styles, and channels are all plugin-configurable. Opening the companion to plugins would:
-
-1. Let users personalize their companion (name, art, personality, focus areas)
-2. Let teams ship companions tuned to their codebase
-3. Create a companion ecosystem through the plugin marketplace
-4. Turn `/buddy` from a charming feature into a platform feature
+The companion is the only user-facing feature in Claude Code with zero extensibility. Skills, agents, hooks, MCP, LSP, output styles, and channels are all plugin-configurable. Opening the companion to plugins would let users personalize their companion, let teams ship companions tuned to their codebase, and create a companion ecosystem through the marketplace.
