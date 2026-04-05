@@ -1,0 +1,26 @@
+{
+  "name": "companion-rfc",
+  "version": "0.2.0",
+  "description": "RFC + proof-of-concept for customizable /buddy companions in Claude Code plugins. Proposes companion as a first-class plugin component with COMPANION.md definitions, event subscriptions, delivery modes, and budget controls.",
+  "author": {
+    "name": "thaafox",
+    "url": "https://github.com/thaafox"
+  },
+  "homepage": "https://github.com/thaafox/claude-code-companion-rfc",
+  "repository": "https://github.com/thaafox/claude-code-companion-rfc",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "anthropic",
+    "buddy",
+    "companion",
+    "plugin-system",
+    "rfc",
+    "proof-of-concept",
+    "terminal-ui",
+    "ascii-art",
+    "hooks",
+    "agentic-coding",
+    "companion-ui"
+  ]
+}
