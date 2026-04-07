@@ -1,11 +1,12 @@
-# Evidence of Demand: 30+ Open Issues
+# Evidence of Demand: 35+ Open Issues
 
-Since `/buddy` shipped on April 1, 2026, the community has filed 30+ issues requesting companion customization. No Anthropic team member has responded to any of them.
+Since `/buddy` shipped on April 1, 2026, the community has filed 35+ issues requesting companion customization. New ones are still being filed a week later. No Anthropic team member has responded to any of them.
 
 ## By Category
 
-### Custom Name (5+ issues)
+### Custom Name (6+ issues)
 - [#41844](https://github.com/anthropics/claude-code/issues/41844) — Allow customizing companion name and appearance (**canonical, duplicates routed here**)
+- [#44801](https://github.com/anthropics/claude-code/issues/44801) — Allow users to customize the Buddy companion name (filed April 7)
 - [#42405](https://github.com/anthropics/claude-code/issues/42405) — Allow customizing Companion (buddy) name
 - [#41990](https://github.com/anthropics/claude-code/issues/41990) — Allow customizing companion name
 
@@ -42,6 +43,7 @@ Since `/buddy` shipped on April 1, 2026, the community has filed 30+ issues requ
 - [#42864](https://github.com/anthropics/claude-code/issues/42864) — Make companion speech bubble duration configurable
 - [#43293](https://github.com/anthropics/claude-code/issues/43293) — Custom companion color configuration
 - [#43321](https://github.com/anthropics/claude-code/issues/43321) — Companion chirp history / log panel
+- [#42767](https://github.com/anthropics/claude-code/issues/42767) — Retrieve past /buddy messages
 
 ### Cross-Platform (1 issue)
 - [#42677](https://github.com/anthropics/claude-code/issues/42677) — Support /buddy in Claude Code Desktop app

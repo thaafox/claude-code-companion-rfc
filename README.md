@@ -2,7 +2,7 @@
 
 You hatched your companion. You like it. But you can't change its name. Can't change how it looks. Can't change what it says or what it pays attention to. The only setting is a mute button.
 
-**30+ people have asked for this in the first 4 days.** ([full list](docs/evidence-of-demand.md))
+**35+ people have asked for this and new requests are still coming in a week later.** ([full list](docs/evidence-of-demand.md))
 
 This repo is a proposal to make the companion customizable through the plugin system — the same way skills, agents, hooks, and everything else in Claude Code already works.
 
